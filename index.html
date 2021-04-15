@@ -4,10 +4,29 @@
 <meta charset="utf-8">
 <title>Exercicio 1</title>
     <style>
+        .form-element-time {
+        margin-right: 10px;
+        margin-top: 10px 
+        }
 
+        .form-element-submit {
+        margin-left: 180px;
+        margin-top: -21px;
+        }
     </style>
 </head>
 <body>
+    <form method="post" class="form-time">
+        <div class="form-element-time">
+            <h2>Horário</h2>
+            <input type="text" pattern="^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$" placeholder="Informe um horário HH:mm" title="Informe um horário HH:mm" autofocus="1" required/>
+        </div>   
+  
+        <div class="form-element-submit">    
+            <input type="submit" value="Enviar"/>
+        </div>
+      </form>
+
     <scripts>
 
     </scripts>
