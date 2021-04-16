@@ -16,20 +16,44 @@
     </style>
 </head>
 <body>
-    <form method="post" class="form-time">
+    <div class="form-time">
         <div class="form-element-time">
             <h2>Horário</h2>
-            <input type="text" pattern="^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$" placeholder="Informe um horário HH:mm" title="Informe um horário HH:mm" autofocus="1" required/>
+            <input id="horario" type="text" pattern="^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$" placeholder="Informe um horário HH:mm" title="Informe um horário HH:mm" autofocus="1" required/>
         </div>   
   
         <div class="form-element-submit">    
-            <input type="submit" value="Enviar"/>
+            <button id="btnEnviar">Enviar</button>
         </div>
-      </form>
+      </div>
+      <p id="mensagem">Bom dia!</p>
 
-    <scripts>
-
-    </scripts>
 </body>
-
+<script>
+    window.onload = function()
+    {
+        function executar(){
+        
+        var msg = document.getElementById("mensagem");
+    
+        var inputTime = document.getElementById("horario").value;
+        var hora = inputTime.split(":")
+        var time = new Date(0000, 00, 00, hora[0], hora[1])
+    
+        if (time >= new Date(0000, 00, 00, 00, 00) && time <= new Date(0000, 00, 00, 12, 00)) {
+            msg.textContent = "Bom dia!"
+        } else if (time >= new Date(0000, 00, 00, 12, 01) && time <= new Date(0000, 00, 00, 18, 00)) {
+            msg.textContent = "Boa tarde!"
+        } else if (time >= new Date(0000, 00, 00, 18, 01) && time <= new Date(0000, 00, 00, 23, 59)) {
+            msg.textContent = "Boa noite!"
+        }
+    
+        var btnEnviar = document.getElementById("btnEnviar");
+        btnEnviar.addEventListener("click", () => {
+            console.log('dhjfkdsj')
+        })
+    }
+    
+}
+</script>
 </html>
