@@ -32,28 +32,29 @@
 <script>
     window.onload = function()
     {
-        function executar(){
+        function executar()
+        {
         
-        var msg = document.getElementById("mensagem");
-    
-        var inputTime = document.getElementById("horario").value;
-        var hora = inputTime.split(":")
-        var time = new Date(0000, 00, 00, hora[0], hora[1])
-    
-        if (time >= new Date(0000, 00, 00, 00, 00) && time <= new Date(0000, 00, 00, 12, 00)) {
-            msg.textContent = "Bom dia!"
-        } else if (time >= new Date(0000, 00, 00, 12, 01) && time <= new Date(0000, 00, 00, 18, 00)) {
-            msg.textContent = "Boa tarde!"
-        } else if (time >= new Date(0000, 00, 00, 18, 01) && time <= new Date(0000, 00, 00, 23, 59)) {
-            msg.textContent = "Boa noite!"
-        }
-    
-        var btnEnviar = document.getElementById("btnEnviar");
-        btnEnviar.addEventListener("click", () => {
-            console.log('dhjfkdsj')
-        })
+            var msg = document.getElementById("mensagem");
+        
+            var inputTime = document.getElementById("horario").value;
+            var hora = inputTime.split(":")
+            var time = new Date(0000, 00, 00, hora[0], hora[1])
+        
+            if (time >= new Date(0000, 00, 00, 00, 00) && time <= new Date(0000, 00, 00, 12, 00)) {
+                msg.textContent = "Bom dia!"
+            } else if (time >= new Date(0000, 00, 00, 12, 01) && time <= new Date(0000, 00, 00, 18, 00)) {
+                msg.textContent = "Boa tarde!"
+            } else if (time >= new Date(0000, 00, 00, 18, 01) && time <= new Date(0000, 00, 00, 23, 59)) {
+                msg.textContent = "Boa noite!"
+            }
+        
+            var btnEnviar = document.getElementById("btnEnviar");
+            btnEnviar.addEventListener("click", () => {
+                console.log('dhjfkdsj')
+            })
     }
     
-}
+        }
 </script>
 </html>
