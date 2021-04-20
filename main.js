@@ -4,7 +4,7 @@ function app() {
   const result = document.getElementById('result')
 
   btnSubmit.addEventListener('click', () => {
-    const hour = new Date(`2000-01-01T${inputTime.value}`);
+    const hour = new Date(`2000-01-01T${inputTime.value}`); // Utilizada uma data qualquer, pois o que importa é somente o horário
 
     const hourMinute = inputTime.value.split(':');
 
